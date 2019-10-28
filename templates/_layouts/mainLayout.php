@@ -45,6 +45,15 @@ use App\View\Helper\HTML;
         <li class="nav-item">
           <a class="nav-link" href="<?=Dispatcher::dispatcher()->encodeUri("users/show", ['page' => 1])?>">Users</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?=Dispatcher::dispatcher()->encodeUri("patients/show", ['page' => 1])?>">Patients</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?=Dispatcher::dispatcher()->encodeUri("privivki/show", ['page' => 1])?>">Privivki</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?=Dispatcher::dispatcher()->encodeUri("karta/show", ['page' => 1])?>">Karta</a>
+        </li>
 
         <li class="nav-item">
           <a class="nav-link" href="<?=Dispatcher::dispatcher()->encodeUri("site/loginform")?>">Login</a>
@@ -54,16 +63,7 @@ use App\View\Helper\HTML;
           <a class="nav-link" href="<?=Dispatcher::dispatcher()->encodeUri("signup/showform")?>">Sign Up</a>
         </li>
 
-        <!-- <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown link
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li> -->
+       
       </ul>
     </div>
   </nav>
