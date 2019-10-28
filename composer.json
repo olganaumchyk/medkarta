@@ -1,5 +1,5 @@
 {
-  "name": "project/project",
+  "name": "medkarta/medkarta",
   "description": "best project",
   "require-dev": {
     "phpunit/phpunit": "^8.3"
