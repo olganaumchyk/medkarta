@@ -20,5 +20,10 @@ return [
     '/users/add' => 'users/showaddform',
     '/users/delete{id}' => 'users/delete',
 
+    '/karta/page{page}' => 'karta/show',
+    '/karta/edit{id}' => 'karta/showeditform',
+    '/karta/add' => 'karta/showaddform',
+    '/karta/delete{id}' => 'karta/delete',
+
     '/signup' => 'signup/showform'
 ];

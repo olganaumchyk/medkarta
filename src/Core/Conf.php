@@ -8,7 +8,7 @@ class Conf
         'host' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'dbname' => 'eshop'
+        'dbname' => 'karta_privivok'
     ];
     const DEFAULT_CONTROLLER = 'Site';
     const DEFAULT_ACTION = 'Home';

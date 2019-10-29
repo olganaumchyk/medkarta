@@ -10,20 +10,20 @@ use TexLab\MyDB\DbEntity;
 class KartaController extends AbstractTableController
 {
     protected $tableName = 'karta';
-    protected $viewPatternsPath = 'templates/karta/';
+    protected $viewPatternsPath = 'templates/table/';
     protected $pageSize = 3;
     
     public function __construct()
     {
         parent::__construct();
-        $this->table = new UsersModel($this->tableName, DB::Link(Conf::MYSQL));
+        $this->table = new KartaModel($this->tableName, DB::Link(Conf::MYSQL));
     }
 
     public function actionShowEditForm()
     {
         $tableKarta = new DbEntity('karta', DB::Link(Conf::MYSQL));
 
-        $this->view->setPatternsPath('templates/karta/');
+        $this->view->setPatternsPath('templates/table/');
 
         $this->render("ShowAddEditForm", [
             'columnsNames' => $this->table->getColumnsNames(),
@@ -40,7 +40,7 @@ class KartaController extends AbstractTableController
     {
         $tableKarta = new DbEntity('karta', DB::Link(Conf::MYSQL));
 
-        $this->view->setPatternsPath('templates/karta/');
+        $this->view->setPatternsPath('templates/table/');
         
         $this->render("ShowAddEditForm", [
             'columnsNames' => $this->table->getColumnsNames(),

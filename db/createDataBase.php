@@ -1,12 +1,12 @@
 <?php
 
-use TexLab\MyDB\mydb;
+use TexLab\MyDB\DB;
 use TexLab\MyDB\Runner;
 use App\Core\Conf;
 
 require __DIR__."/../vendor/autoload.php";
 
-$file = file_get_contents(__DIR__.'/mydb.sql');
+$file = file_get_contents(__DIR__.'/karta_privivok.sql');
 $mySQLConnectData = Conf::MYSQL;
 
 unset($mySQLConnectData['dbname']);
