@@ -25,5 +25,15 @@ return [
     '/karta/add' => 'karta/showaddform',
     '/karta/delete{id}' => 'karta/delete',
 
+    '/privivki/page{page}' => 'privivki/show',
+    '/privivki/edit{id}' => 'privivki/showeditform',
+    '/privivki/add' => 'privivki/showaddform',
+    '/privivki/delete{id}' => 'privivki/delete',
+
+    '/patients/page{page}' => 'patients/show',
+    '/patients/edit{id}' => 'patients/showeditform',
+    '/patients/add' => 'patients/showaddform',
+    '/patients/delete{id}' => 'patients/delete',
+
     '/signup' => 'signup/showform'
 ];

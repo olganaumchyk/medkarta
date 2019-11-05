@@ -1,4 +1,12 @@
 <?php
+// namespace App\Controller;
+
+// class KartaController extends AbstractTableController
+// {
+//     protected $tableName = 'karta';
+//     protected $viewPatternsPath = 'templates/table/';
+//     protected $pageSize = 2;
+// }
 
 namespace App\Controller;
 
@@ -21,7 +29,9 @@ class KartaController extends AbstractTableController
 
     public function actionShowEditForm()
     {
-        $tableKarta = new DbEntity('karta', DB::Link(Conf::MYSQL));
+        $tableKartaGroup = new DbEntity('karta', DB::Link(Conf::MYSQL));
+        $tablePrivivki = new DbEntity('privivki', DB::Link(Conf::MYSQL));
+        $tablePatients = new DbEntity('patients', DB::Link(Conf::MYSQL));
 
         $this->view->setPatternsPath('templates/table/');
 
@@ -29,26 +39,32 @@ class KartaController extends AbstractTableController
             'columnsNames' => $this->table->getColumnsNames(),
             'editValues' => $this->table->get(['id' => $_GET['id']])[0],
             'URL' => '?t=' . $this->shortClassName() . '&a=Edit&id=' . $_GET['id'],
-            'karta' => $tableKarta->getColumn('description'),
+            'karta' => $tableKartaGroup->getColumn('description'),
+            'patients_id'=>$tablePatients->getColumn('fio'),
+            'privivki_id'=>$tablePrivivki->getColumn('name'),
             'tableHeaders' => $this->table->getColumnsComments()
         ]);
     }
 
 
 
-    public function actionShowAddForm()
-    {
-        $tableKarta = new DbEntity('karta', DB::Link(Conf::MYSQL));
+    // public function actionShowAddForm()
+    // {
+    //     $tableKartaGroup = new DbEntity('karta', DB::Link(Conf::MYSQL));
+    //     $tablePrivivki = new DbEntity('privivki', DB::Link(Conf::MYSQL));
+    //     $tablePatients = new DbEntity('patients', DB::Link(Conf::MYSQL));
 
-        $this->view->setPatternsPath('templates/table/');
+    //     $this->view->setPatternsPath('templates/table/');
         
-        $this->render("ShowAddEditForm", [
-            'columnsNames' => $this->table->getColumnsNames(),
-            'URL' => '?t=' . $this->shortClassName() . '&a=Add',
-            'karta' => $tableKarta->getColumn('description'),
-            'tableHeaders' => $this->table->getColumnsComments()
-        ]);
-    }
+    //     $this->render("ShowAddEditForm", [
+    //         'columnsNames' => $this->table->getColumnsNames(),
+    //         'URL' => '?t=' . $this->shortClassName() . '&a=Add',
+    //         'karta' => $tableKartaGroup->getColumn('description'),
+    //         `karta`.`patients_id`=>$tablePatients->getColumn('fio'),
+    //         `karta`.`privivki_id`=>$tablePrivivki->getColumn('name'),
+    //         'tableHeaders' => $this->table->getColumnsComments()
+    //     ]);
+    // }
 
 
 }

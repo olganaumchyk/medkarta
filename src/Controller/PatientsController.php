@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Model\UsersModel;
+use App\Model\PatientsModel;
 use TexLab\MyDB\DB;
 use App\Core\Conf;
 use TexLab\MyDB\DbEntity;
@@ -16,7 +16,7 @@ class PatientsController extends AbstractTableController
     public function __construct()
     {
         parent::__construct();
-        $this->table = new UsersModel($this->tableName, DB::Link(Conf::MYSQL));
+        $this->table = new PatientsModel($this->tableName, DB::Link(Conf::MYSQL));
     }
 
     public function actionShowEditForm()

@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Model\UsersModel;
+use App\Model\PrivivkiModel;
 use TexLab\MyDB\DB;
 use App\Core\Conf;
 use TexLab\MyDB\DbEntity;
@@ -10,13 +10,13 @@ use TexLab\MyDB\DbEntity;
 class PrivivkiController extends AbstractTableController
 {
     protected $tableName = 'privivki';
-    protected $viewPatternsPath = 'templates/privivki/';
+    protected $viewPatternsPath = 'templates/table/';
     protected $pageSize = 3;
     
     public function __construct()
     {
         parent::__construct();
-        $this->table = new UsersModel($this->tableName, DB::Link(Conf::MYSQL));
+        $this->table = new PrivivkiModel($this->tableName, DB::Link(Conf::MYSQL));
     }
 
     public function actionShowEditForm()

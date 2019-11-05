@@ -12,7 +12,7 @@ class KartaModel extends DbEntity
         $this
         ->reset()
         ->setSelect("`karta`.`id`, `karta`.`patients_id`, `karta`.`privivki_id`, `karta`.`date`")
-        ->setFrom("`patients`, `privivki`")
+        ->setFrom("`patients`, `privivki`,`karta`")
         ->setWhere("`karta`.`patients_id` = `patients`.`id`,`karta`.`privivki_id` =`privivki`.`id` ")
         ->setOrderBy("karta`.`id`");
         return parent::getPage($page);
