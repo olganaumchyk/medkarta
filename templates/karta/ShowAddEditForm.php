@@ -15,7 +15,7 @@
 
                             echo "</select></lable><br>";
                         }
-                        if ($name == 'birth_date') { 
+                        if ($name == 'date') { 
                             echo "<label>"
                             . (empty($tableHeaders[$name]) ? $name : $tableHeaders[$name])
                             . "<input class='form-control mb-4' type='date' name='"
