@@ -2,12 +2,16 @@
     "adm": [],
     "usr": [
         "UserGroupController",
-        "UsersController"
+        "UsersController"  
     ],
     "dft": [
         "tableOneController",
         "tableTwoController",
         "UserGroupController",
-        "UsersController"
+        "UsersController",
+        "PrivivkiController",
+        "PatientsController",
+        "KartaController"
+
     ]
 }

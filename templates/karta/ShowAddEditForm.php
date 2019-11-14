@@ -9,8 +9,8 @@
 
                             echo "<label>" . (empty($tableHeaders[$name]) ? $name : $tableHeaders[$name]);
                             echo "<br><select name='karta'>";
-                            foreach ($userGroup as $id => $groupName) {
-                                echo "<option value='$id'>$groupName</option>";
+                            foreach ($karta as $id => $kartaName) {
+                                echo "<option value='$id'>$kartaName</option>";
                             }
 
                             echo "</select></lable><br>";
