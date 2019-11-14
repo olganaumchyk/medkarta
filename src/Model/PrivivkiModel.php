@@ -11,7 +11,7 @@ class PrivivkiModel extends DbEntity
     {
         $this
         ->reset()
-        ->setSelect("`privivki`.`id`, `privivki`.`name`, `privivki`.`vaccine`,`privivki`.`date`")
+        ->setSelect("`privivki`.`id`, `privivki`.`name`, `privivki`.`vaccine`")
         ->setFrom("`privivki`")
         ->setOrderBy("`privivki`.`id`");
         return parent::getPage($page);

@@ -10,7 +10,7 @@
                             echo "<label>" . (empty($tableHeaders[$name]) ? $name : $tableHeaders[$name]);
                             echo "<br><select name='privivki'>";
                             foreach ($privivki as $id => $privivkiName) {
-                                echo "<option value='$id'>$groupprivivkiName</option>";
+                                echo "<option value='$id'>$privivkiName</option>";
                             }
 
                             echo "</select></lable><br>";
