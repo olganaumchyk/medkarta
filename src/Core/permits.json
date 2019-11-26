@@ -11,7 +11,8 @@
         "UsersController",
         "PrivivkiController",
         "PatientsController",
-        "KartaController"
+        "KartaController",
+        "PrintController"
 
     ]
 }
