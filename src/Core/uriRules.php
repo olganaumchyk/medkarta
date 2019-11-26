@@ -27,8 +27,8 @@ return [
     '/patients/page{page}' => 'patients/show',
     '/patients/edit{id}' => 'patients/showeditform',
     '/patients/add' => 'patients/showaddform',
-    '/patients/delete{id}' => 'patients/delete'
+    '/patients/delete{id}' => 'patients/delete',
 
-    // '/print/page{page}' => 'print/show'
+    '/print' => 'print/searchform'
     
 ];

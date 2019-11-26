@@ -54,7 +54,7 @@ use App\View\Helper\HTML;
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="<?=Dispatcher::dispatcher()->encodeUri("print/show")?>">Print</a>
+          <a class="nav-link" href="<?=Dispatcher::dispatcher()->encodeUri("print/searchform")?>">Print</a>
         </li>
 
        
