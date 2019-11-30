@@ -9,4 +9,3 @@ use App\Core\Router;
 
 (new Router())->run();
 
-echo "<img src='imgpreview.jpg'>";

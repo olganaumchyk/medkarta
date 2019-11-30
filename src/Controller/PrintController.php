@@ -20,28 +20,22 @@ class PrintController extends AbstractTableController
     }
     public function actionSearchForm()
     {
-        print_r($this->table->search());
+        // print_r($this->table->search());
+        // $tableKarta = new DbEntity('karta', DB::Link(Conf::MYSQL));
+        // $tablePatients = new DbEntity('patients', DB::Link(Conf::MYSQL));
+        // $tablePrivivki = new DbEntity('privivki', DB::Link(Conf::MYSQL));
+        // $this->view->setPatternsPath('templates/print/');
 
         $this->render("show", [
-
+            // 'columnsNames' => $this->table->getColumnsNames(),
+            // 'URL' => '?t=' . $this->shortClassName() . '&a=Add',
+            // 'karta' => $tableKarta->getColumn('description'),
+            // 'patients' => $tablePatients->getColumn('description'),
+            // 'privivki' => $tablePrivivki->getColumn('description'),
+            // 'tableHeaders' => $this->table->getColumnsComments()
         ]);
     }
 
 
-    // public function actionShowEditForm()
-    // {
-    //     // $tableKarta = new DbEntity('karta', DB::Link(Conf::MYSQL));
-    //     $tablePatients = new DbEntity('patients', DB::Link(Conf::MYSQL));
-    //     $tablePrivivki = new DbEntity('privivki', DB::Link(Conf::MYSQL));
-    //     $this->view->setPatternsPath('templates/karta/');
-
-    //     $this->render("ShowAddEditForm", [
-    //         'columnsNames' => $this->table->getColumnsNames(),
-    //         'editValues' => $this->table->get(['id' => $_GET['id']])[0],
-    //         'URL' => '?t=' . $this->shortClassName() . '&a=Edit&id=' . $_GET['id'],
-    //         // 'karta' => $tableKarta->getColumn('description'),
-    //         'patients'=>$tablePatients->getColumn('fio'),
-    //         'privivki'=>$tablePrivivki->getColumn('name'),
-    //         'tableHeaders' => $this->table->getColumnsComments()
-    //     ]);
+    
 }

@@ -48,13 +48,14 @@ use App\View\Helper\HTML;
         <li class="nav-item">
           <a class="nav-link" href="<?=Dispatcher::dispatcher()->encodeUri("karta/show", ['page' => 1])?>">Karta</a>
         </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="<?=Dispatcher::dispatcher()->encodeUri("site/loginform")?>">Login</a>
-        </li>
-
         <li class="nav-item">
           <a class="nav-link" href="<?=Dispatcher::dispatcher()->encodeUri("print/searchform")?>">Print</a>
+        </li>
+
+
+        
+        <li class="nav-item">
+          <a class="nav-link" href="<?=Dispatcher::dispatcher()->encodeUri("site/loginform")?>">Login</a>
         </li>
 
        
