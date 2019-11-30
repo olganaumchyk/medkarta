@@ -39,12 +39,13 @@ class PrintController extends AbstractTableController
         // print_r($this->table->search($_POST['fio']));
 
         $this->render("search", [
-            // 'table' => $table->search($_POST['fio']),
-            'columnsNames' => $this->table->getColumnsNames(),
+            'table' => $table->search($_POST['fio']),
+            // 'columnsNames' => $this->table->getColumnsNames(),
+            // "URL" => '?t=' . $this->shortClassName() . '&a=Search',
             'patients' => $tablePatients->getColumn('fio'),
             'privivki' => $tablePrivivki->getColumn('name'),
             'karta' => $tableKarta->getColumn('date'),
-            'tableHeaders' => $this->table->getColumnsComments(),
+            // 'tableHeaders' => $this->table->getColumnsComments(),
 
         ]);
     }
