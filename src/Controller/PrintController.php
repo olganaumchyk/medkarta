@@ -18,24 +18,34 @@ class PrintController extends AbstractTableController
         parent::__construct();
         $this->table = new PrintModel($this->tableName, DB::Link(Conf::MYSQL));
     }
+
     public function actionSearchForm()
     {
         // print_r($this->table->search());
-        // $tableKarta = new DbEntity('karta', DB::Link(Conf::MYSQL));
-        // $tablePatients = new DbEntity('patients', DB::Link(Conf::MYSQL));
-        // $tablePrivivki = new DbEntity('privivki', DB::Link(Conf::MYSQL));
-        // $this->view->setPatternsPath('templates/print/');
-
-        $this->render("show", [
-            // 'columnsNames' => $this->table->getColumnsNames(),
-            // 'URL' => '?t=' . $this->shortClassName() . '&a=Add',
-            // 'karta' => $tableKarta->getColumn('description'),
-            // 'patients' => $tablePatients->getColumn('description'),
-            // 'privivki' => $tablePrivivki->getColumn('description'),
-            // 'tableHeaders' => $this->table->getColumnsComments()
+        $this->render("searchform", [
+            "URL" => '?t=' . $this->shortClassName() . '&a=Search',
         ]);
     }
 
+    public function actionSearch()
+    {
 
-    
+        // print_r($_POST);
+        $table = new PrintModel($this->tableName, DB::Link(Conf::MYSQL));
+        $tablePatients = new DbEntity('patients', DB::Link(Conf::MYSQL));
+        $tablePrivivki = new DbEntity('privivki', DB::Link(Conf::MYSQL));
+        $tableKarta = new DbEntity('karta', DB::Link(Conf::MYSQL));
+
+        // print_r($this->table->search($_POST['fio']));
+
+        $this->render("search", [
+            // 'table' => $table->search($_POST['fio']),
+            'columnsNames' => $this->table->getColumnsNames(),
+            'patients' => $tablePatients->getColumn('fio'),
+            'privivki' => $tablePrivivki->getColumn('name'),
+            'karta' => $tableKarta->getColumn('date'),
+            'tableHeaders' => $this->table->getColumnsComments(),
+
+        ]);
+    }
 }
