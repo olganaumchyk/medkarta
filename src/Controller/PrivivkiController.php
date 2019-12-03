@@ -11,7 +11,7 @@ class PrivivkiController extends AbstractTableController
 {
     protected $tableName = 'privivki';
     protected $viewPatternsPath = 'templates/table/';
-    protected $pageSize = 3;
+    protected $pageSize = 15;
     
     public function __construct()
     {

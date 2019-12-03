@@ -10,7 +10,7 @@ echo $paginationHTML;
 
 echo "<div class='container'><div class='row justify-content-center'>";
 
-echo "<table class='table table-striped table-dark'>";
+echo "<table class='table table-striped table-info'>";
 
 echo "<tr>";
 foreach ($tableHeaders as $fieldName => $th ) {
@@ -23,8 +23,8 @@ foreach ($table as $row) {
     foreach ($row as $value) {
         echo "<td>$value</td>";
     }
-    echo "<td><a href='$editLink" . $row['id'] . "' class='btn btn-warning'>Edit</a></td>";
-    echo "<td><a href='$delLink" . $row['id'] . "' class='btn btn-danger'>Delete</a></td></tr>";
+    echo "<td><a href='$editLink" . $row['id'] . "' class='btn btn-success'>Edit</a></td>";
+    echo "<td><a href='$delLink" . $row['id'] . "' class='btn btn-secondary'>Delete</a></td></tr>";
 }
 echo "</table>";
 echo "<a href='$addLink' class='btn btn-success'>Add new</a>";

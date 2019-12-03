@@ -11,7 +11,7 @@ class PrintController extends AbstractTableController
 {
     protected $tableName = '';
     protected $viewPatternsPath = 'templates/print/';
-    protected $pageSize = 10;
+    protected $pageSize = 15;
 
     public function __construct()
     {

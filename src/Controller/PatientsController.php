@@ -11,7 +11,7 @@ class PatientsController extends AbstractTableController
 {
     protected $tableName = 'patients';
     protected $viewPatternsPath = 'templates/table/';
-    protected $pageSize = 3;
+    protected $pageSize = 15;
     
     public function __construct()
     {

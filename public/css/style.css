@@ -1,7 +1,10 @@
 body {
-  background-color: khaki;
-  color: aquamarine;
   font-style: normal;
   font-size-adjust: initial;
+  color: #6bf3e1;
+}
+
+.navbar .navbar-nav-link {
+  color: #6bf3e1;
 }
 /*# sourceMappingURL=style.css.map */

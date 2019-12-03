@@ -10,7 +10,7 @@ class KartaController extends AbstractTableController
 {
     protected $tableName = 'karta';
     protected $viewPatternsPath = 'templates/karta/';
-    protected $pageSize = 3;
+    protected $pageSize = 10;
     
     public function __construct()
     {

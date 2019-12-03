@@ -11,7 +11,7 @@ class UsersController extends AbstractTableController
 {
     protected $tableName = 'users';
     protected $viewPatternsPath = 'templates/table/';
-    protected $pageSize = 3;
+    protected $pageSize = 20;
     
     public function __construct()
     {
