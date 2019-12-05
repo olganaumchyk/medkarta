@@ -1,10 +1,20 @@
-body {
-  font-style: normal;
-  font-size-adjust: initial;
+.navbar .navbar-nav-link {
   color: #6bf3e1;
 }
 
-.navbar .navbar-nav-link {
-  color: #6bf3e1;
+input[type=text] {
+  background-color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.pagination a {
+  background: #6bf3e1 !important;
+  border-color: #6bf3e1;
+  color: #2b776d;
+}
+
+.pagination a:hover {
+  color: #2b776d;
 }
 /*# sourceMappingURL=style.css.map */

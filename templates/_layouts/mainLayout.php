@@ -23,7 +23,7 @@ use App\View\Helper\HTML;
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light "style='background-color: rgb(60, 214, 194);'>
+  <nav class="navbar navbar-expand-lg navbar-light "style='background-color: rgb(121, 238, 222);'>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -31,7 +31,7 @@ use App\View\Helper\HTML;
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="<?=Dispatcher::dispatcher()->encodeUri("site/home")?>">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="<?=Dispatcher::dispatcher()->encodeUri("site/home")?>">Главная <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<?=Dispatcher::dispatcher()->encodeUri("usergroup/show", ['page' => 1])?>">Группы пользователей</a>
@@ -51,8 +51,6 @@ use App\View\Helper\HTML;
         <li class="nav-item">
           <a class="nav-link" href="<?=Dispatcher::dispatcher()->encodeUri("print/searchform")?>">Поиск</a>
         </li>
-
-
         
         <li class="nav-item">
           <a class="nav-link" href="<?=Dispatcher::dispatcher()->encodeUri("site/loginform")?>">Логин</a>

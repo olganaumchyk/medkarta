@@ -1,12 +1,25 @@
-body{
-    font-style: normal ;
-    font-size-adjust: initial;
-    color:rgb(107, 243, 225);
-
-}
 
 .navbar{
     .navbar-nav-link {
         color: rgb(107, 243, 225);
+    }
+}
+
+input[type=text] {
+    background-color: white;
+    background-position: center; 
+    background-repeat: no-repeat;
+    
+  }
+
+.pagination {
+    a {
+        background: rgb(107, 243, 225) !important;
+        border-color: rgb(107, 243, 225);
+        color: rgb(43, 119, 109);
+    }
+
+    a:hover {
+        color: rgb(43, 119, 109);
     }
 }

@@ -48,4 +48,26 @@ class PrintController extends AbstractTableController
             'tableHeaders' => ['пациент','дата рождения','адрес','дата вакцинации','прививка',' описание вакцины']
         ]);
     }
+
+
+
+    public function actionSearchPriv()
+    {
+
+       
+        $table = new PrintModel($this->tableName, DB::Link(Conf::MYSQL));
+        $tablePatients = new DbEntity('patients', DB::Link(Conf::MYSQL));
+        $tablePrivivki = new DbEntity('privivki', DB::Link(Conf::MYSQL));
+        $tableKarta = new DbEntity('karta', DB::Link(Conf::MYSQL));
+
+        $this->render("search", [
+            'table' => $table->search($_POST['name']),
+            
+            "URL" => '?t=' . $this->shortClassName() . '&a=Search',
+            'patients' => $tablePatients->getColumn('fio','birth_date','adres'),
+            'privivki' => $tablePrivivki->getColumn('name','vaccine'),
+            'karta' => $tableKarta->getColumn('date'),
+            'tableHeaders' => ['прививка','пациент','дата рождения','адрес','дата вакцинации',' описание вакцины']
+        ]);
+    }
 }
