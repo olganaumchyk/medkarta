@@ -8,7 +8,7 @@ echo "<tr>";
 foreach ($tableHeaders as $fieldName => $th) {
     echo "<th>" . (empty($th) ? $fieldName : $th) . "</th>";
 }
-echo "<th colspan='2'></th></tr>";
+// echo "<th colspan='2'></th></tr>";
 
 foreach ($table as $row) {
     echo "<tr>";
