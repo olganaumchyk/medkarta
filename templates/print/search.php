@@ -2,7 +2,7 @@
 
 echo "<div class='container'><div class='row justify-content-center'>";
 
-echo "<table class='table table-striped table-dark'>";
+echo "<table class='table table-striped table-success'>";
 
 echo "<tr>";
 foreach ($tableHeaders as $fieldName => $th ) {
