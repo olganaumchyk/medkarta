@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Ноя 12 2019 г., 19:00
+-- Время создания: Дек 12 2019 г., 18:25
 -- Версия сервера: 8.0.12
 -- Версия PHP: 7.2.10
 
@@ -40,7 +40,19 @@ CREATE TABLE `karta` (
 --
 
 INSERT INTO `karta` (`id`, `date`, `patients_id`, `privivki_id`) VALUES
-(2, '2019-11-05', 3, 1);
+(2, '2019-11-05', 4, 1),
+(3, '2019-11-05', 2, 2),
+(4, '2019-11-14', 4, 1),
+(5, '2019-11-12', 4, 4),
+(6, '2019-12-26', 3, 2),
+(7, '2019-12-05', 5, 1),
+(8, '2019-12-18', 6, 1),
+(9, '2019-12-06', 6, 1),
+(10, '2019-12-06', 4, 1),
+(11, '2019-12-05', 6, 1),
+(12, '2019-12-13', 7, 1),
+(13, '2019-12-12', 8, 1),
+(14, '2019-12-11', 9, 1);
 
 -- --------------------------------------------------------
 
@@ -60,8 +72,14 @@ CREATE TABLE `patients` (
 --
 
 INSERT INTO `patients` (`id`, `fio`, `adres`, `birth_date`) VALUES
-(2, 'Наумчик Ольга Викторовна', 'улюТитова', '2019-11-01'),
-(3, 'иванов иван', 'ул.Титова', '2019-07-17');
+(2, 'Наумчик Ольга Викторовна', 'ул.Титова', '2019-11-01'),
+(3, 'иванов иван', 'ул.Титова', '2019-07-17'),
+(4, 'федоров илья петрович', 'ул.3-я Загородная', '2018-02-14'),
+(5, 'федорова анна петровна', 'ул.Титова, 142', '2005-06-16'),
+(6, 'федоров сергей ильич', 'ул.Титова,150', '2006-03-21'),
+(7, 'федоров иван сергеевич', 'ул.Титова,144', '2010-11-12'),
+(8, 'иванов федор петрович', 'ул.Титова,146', '2004-05-27'),
+(9, 'федуро андрей леонидович', 'ул.Титова, 148', '2012-08-15');
 
 -- --------------------------------------------------------
 
@@ -81,7 +99,10 @@ CREATE TABLE `privivki` (
 
 INSERT INTO `privivki` (`id`, `name`, `vaccine`) VALUES
 (1, 'ипв', 'имовакс-полио'),
-(2, 'гепатит В', 'Эувакс, Корея');
+(2, 'гепатит В', 'Эувакс, Корея'),
+(3, 'дифтерия', 'ад-м'),
+(4, 'столбняк', 'акдс'),
+(5, 'столбняк', 'пентаксим');
 
 -- --------------------------------------------------------
 
@@ -173,25 +194,25 @@ ALTER TABLE `user_group`
 -- AUTO_INCREMENT для таблицы `karta`
 --
 ALTER TABLE `karta`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT для таблицы `patients`
 --
 ALTER TABLE `patients`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT для таблицы `privivki`
 --
 ALTER TABLE `privivki`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '№', AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '№', AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT для таблицы `user_group`
