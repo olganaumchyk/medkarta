@@ -30,13 +30,13 @@ class PrintController extends AbstractTableController
     public function actionSearch()
     {
 
-        // print_r($_POST);
+       
         $table = new PrintModel($this->tableName, DB::Link(Conf::MYSQL));
         $tablePatients = new DbEntity('patients', DB::Link(Conf::MYSQL));
         $tablePrivivki = new DbEntity('privivki', DB::Link(Conf::MYSQL));
         $tableKarta = new DbEntity('karta', DB::Link(Conf::MYSQL));
 
-        // print_r($this->table->search($_POST['fio']));
+       
 
         $this->render("search", [
             'table' => $table->search($_POST['fio']),

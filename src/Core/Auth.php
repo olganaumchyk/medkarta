@@ -66,7 +66,7 @@ class Auth
                 $permits[($_SESSION['user']['cod'] ?? 'dft')]
             )
         );
-        //        return !in_array($className, $permits[($_SESSION['user']['cod'] ?? 'dft')]);
+       
     }
     static public function currentUserInfo()
     {
