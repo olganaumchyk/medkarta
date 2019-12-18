@@ -29,6 +29,10 @@ return [
     '/patients/add' => 'patients/showaddform',
     '/patients/delete{id}' => 'patients/delete',
 
-    '/print' => 'print/searchform'
-    
+    '/print' => 'print/searchform',
+
+    '/priv' => 'priv/searchform',
+
+    '/date' => 'date/searchform'
+
 ];

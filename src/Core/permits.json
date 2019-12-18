@@ -10,7 +10,9 @@
         "PrivivkiController",
         "PatientsController",
         "KartaController",
-        "PrintController"
+        "PrintController",
+        "PrivController",
+        "DateController"
 
     ]
 }

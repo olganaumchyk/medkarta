@@ -44,10 +44,14 @@ use App\View\Helper\HTML;
           <a class="nav-link" href="<?= Dispatcher::dispatcher()->encodeUri("karta/show", ['page' => 1]) ?>">Карта прививок</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= Dispatcher::dispatcher()->encodeUri("print/searchform") ?>">Поиск</a>
+          <a class="nav-link" href="<?= Dispatcher::dispatcher()->encodeUri("print/searchform") ?>">Поиск пациента</a>
         </li>
-
-
+        <li class="nav-item">
+          <a class="nav-link" href="<?= Dispatcher::dispatcher()->encodeUri("priv/searchform") ?>">Поиск прививки</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?= Dispatcher::dispatcher()->encodeUri("date/searchform") ?>">Поиск даты</a>
+        </li>
         <?php
         if ($_SESSION['user']['cod'] != "usr" ? " disabled" : "") {
           echo "<li class='nav-item'>
